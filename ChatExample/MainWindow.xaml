@@ -1,0 +1,44 @@
+﻿<!--
+    <i:Interaction.Triggers>
+        <i:EventTrigger EventName="Closing">
+            <i:InvokeCommandAction Command="{Binding CloseCommand}" />
+        </i:EventTrigger>
+    </i:Interaction.Triggers>
+    
+     <i:Interaction.Behaviors>
+        <local:AutoScrollBehavior />
+     </i:Interaction.Behaviors>
+    
+    Text="{Binding ChatText, UpdateSourceTrigger=PropertyChanged}"
+    
+    Text="{Binding UserText, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">
+    
+    <TextBox.InputBindings>
+        <KeyBinding Command="{Binding SendCommand}"
+                    CommandParameter="{Binding ElementName=textBox, Path=Text}"
+                    Key="Enter"></KeyBinding>
+    </TextBox.InputBindings>
+    
+    Command="{Binding SendCommand}"
+    CommandParameter="{Binding ElementName=textBox, Path=Text}"
+    
+     ItemsSource="{Binding ConnectedClients}"
+    -->
+<Window x:Class="ChatExample.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ChatExample"
+        xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+        mc:Ignorable="d"
+        Title="{Binding Title}"
+        MaxHeight="700"
+        MaxWidth="900">
+    <i:Interaction.Triggers>
+        <i:EventTrigger EventName="Closing">
+            <i:InvokeCommandAction Command="{Binding CloseCommand}" />
+        </i:EventTrigger>
+    </i:Interaction.Triggers>
+
+</Window>
